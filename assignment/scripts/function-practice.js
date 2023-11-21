@@ -15,48 +15,68 @@ console.log('Test - should say "Hello World!"', hello());
 // 2. Function to return an personalized hello, using the `name` argument.
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
 function helloName(name) {
-  return;
+  return `Hello, ${name}!`;
 }
 // Remember to call the function to test
-
+console.log(helloName('Scott'));
 
 // 3. Function to add two numbers together & return the result
-function addNumbers(firstNumber) {
+function addNumbers(firstNumber, secondNumber) {
   // return firstNumber + secondNumber;
+  let addTwoNumbers = firstNumber + secondNumber;
+  return addTwoNumbers;
 }
-
+console.log(addNumbers(2, 3));
 
 // 4. Function to multiply three numbers & return the result
-function multiplyThree() {
-
+function multiplyThree(firstNumber, secondNumber, thirdNumber) {
+  let multiplyThreeNumbers = firstNumber * secondNumber * thirdNumber;
+  return multiplyThreeNumbers;
 }
+console.log(multiplyThree(2, 2, 2));
 
 
 // 5. Function that will return true if a number is positive, 
 //    or greater than zero, and false otherwise
 function isPositive(number) {
   if (number > 0) {
-    return;
-  }
-  return;
+    return 'True';
+  } 
+  return 'False';
 }
 // Call the function to test each outcome (true & false) 
 // Write a separate console.log statement for each outcome
-
-
+console.log(isPositive(3));
+console.log(isPositive(0));
+console.log(isPositive(-2));
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
+let testArray = [1, 2, 3, 4];
+let testEmptyArray = [];
 function getLast(array) {
-
+  if (array != "undefined" && array.lenth != 0) {
+    let last = array[array.length-1];
+    return last;
+  } else {
+    return 'undefined';
+  }
 }
-
+console.log(getLast(testArray));
+console.log(getLast(testEmptyArray));
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
+let findArray = ['Mario', 'Luigi', 'Yoshi'];
 function find(value, array) {
-
+  for (character of array) {
+    if(character === value) {
+      return 'True';
+    }
+    return 'False'
+  }
 }
-
+console.log(find('Mario', findArray));
+console.log(find('Peach', findArray));
 // ----------------------
 // Stretch Goals
 // ----------------------
